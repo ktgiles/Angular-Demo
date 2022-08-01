@@ -1,0 +1,34 @@
+.player-card-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.player-card{
+    background-color: rgb(199, 187, 211);
+    border-style: groove;
+    border-color: black;
+    margin: 10px;
+
+}
+
+.input-container{
+    background-color: lightslategray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.button-container, .error-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: lightslategray;
+    padding-bottom: 50px;
+}

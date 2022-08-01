@@ -1,0 +1,46 @@
+<div class="player-card-container">
+    <div *ngFor="let player of players">
+      
+        <mat-card class="player-card">
+            <mat-card-header>
+                <mat-card-title>{{player.name}}</mat-card-title>
+                <mat-card-subtitle>ID: {{player.id}}</mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>{{player.name}} plays for {{player.country}} and has played {{player.matches}} matches.</p>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>
+
+<div class = "input-container">
+    <mat-form-field appearance="outline">
+        <mat-label>Player ID</mat-label>
+        <input matInput placeholder="Enter Player ID" [(ngModel)]="player.id">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Player Name</mat-label>
+        <input matInput placeholder="Enter Player Name" [(ngModel)]="player.name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Player Country</mat-label>
+        <input matInput [(ngModel)]="player.country">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Matches Played</mat-label>
+        <input matInput placeholder="Enter Number of Matches Played" [(ngModel)]="player.matches">
+    </mat-form-field>
+</div>
+
+<div class = "error-container">
+    {{errorMessage}}
+</div>
+
+<div class = "button-container">
+    <button (click)="add()" mat-raised-button color="primary"> Add Player </button>
+</div>
+
+
+
